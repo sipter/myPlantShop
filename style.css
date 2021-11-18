@@ -1,0 +1,455 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Open+Sans:wght@300&family=Reenie+Beanie&display=swap");
+
+/* 
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Reenie Beanie', cursive;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  --beigeColor: #dad7cd;
+  --lightOliveColor: #a3b18a;
+  --oliveColor: #588157;
+  --darkOliveColor: #3a5a40;
+  --superDarkOliveColor: #344e41;
+}
+
+/* Header styling starts here */
+header {
+  min-width: 100%;
+  height: 50vh;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.3), rgba(4, 9, 30, 0.2)),
+    url(images/headerPlant.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.headerH1 {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Gloria Hallelujah", cursive;
+  margin-left: 2rem;
+}
+
+/* Navbar styling*/
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(4, 9, 30, 0.4);
+}
+
+ul li {
+  display: inline;
+  font-size: 1.8rem;
+  padding: 5px;
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 800;
+}
+
+a {
+  text-decoration: none;
+  color: var(--beigeColor);
+}
+
+/* Decoration ideas start here */
+
+h2 {
+  font-size: 2rem;
+  font-family: "Gloria Hallelujah", cursive;
+  margin-top: 8px;
+}
+
+img {
+  height: 200px;
+  width: 250px;
+  object-fit: contain;
+}
+
+.decoration-ideas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.decoration-ideas-images > div > p {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Reenie Beanie", cursive;
+}
+
+/* hr */
+
+hr {
+  margin: 25px auto;
+  width: 80%;
+  background: var(--darkOliveColor);
+}
+
+/* plants */
+
+.plants > div > img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--darkOliveColor);
+}
+
+.container-plants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.plantsCard {
+  width: 200px;
+  height: 300px;
+  /* border: 1px solid black; */
+}
+
+.plantsCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 65px;
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-family: "Reenie Beanie", cursive;
+}
+
+.plantsCard > p {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+/* .plants > p {
+    font-size: 1.8rem;
+    text-align: right;
+} */
+
+/* .plants a {
+    color: var(--superDarkOliveColor);
+} */
+
+/* ------------------------------------------------------------ */
+
+/* online shop */
+
+.online-shop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop > div > p {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Reenie Beanie", cursive;
+}
+
+.shoppingCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* --------------------------------- */
+
+/* Button */
+
+.button {
+  margin-top: 10px;
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid var(--lightOliveColor);
+  border-radius: 25px;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+
+.button span {
+  position: relative;
+  z-index: 1;
+}
+
+.button::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 25px;
+  background: var(--oliveColor);
+  transition: 0.3s;
+}
+
+.button:hover {
+  color: var(--beigeColor);
+  cursor: pointer;
+}
+
+.button:hover::after {
+  width: 100%;
+}
+
+/* ----------------------------------------------------- */
+/* history */
+
+.history {
+  display: none;
+}
+/* ----------------------------------------------------- */
+
+/* contact form */
+
+.line {
+  display: none;
+}
+
+.contactContainer {
+  /* width: 80%;
+    margin: 0 auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contactCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label,
+input {
+  display: block;
+  margin: 5px;
+}
+
+label {
+  font-size: 2rem;
+  font-family: "Reenie Beanie", cursive;
+}
+
+::placeholder {
+  text-align: center;
+  font-size: 1rem;
+}
+
+input,
+textarea {
+  border-left: none;
+  border-top: none;
+  border-right: 1px solid var(--oliveColor);
+  border-bottom: 2px solid var(--oliveColor);
+  box-shadow: 4px 3px 10px 0px rgba(52, 78, 65, 0.6);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  text-align: center;
+  color: var(--superDarkOliveColor);
+}
+
+/* footer */
+
+footer {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  background: var(--darkOliveColor);
+  color: var(--beigeColor);
+}
+
+.navFooter,
+.newsletter {
+  display: none;
+}
+
+/* icons */
+
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  color: var(--beigeColor);
+}
+
+
+
+
+
+
+/* MEDIA QUERY */
+
+@media (min-width: 576px) {
+  /* NAVBAR */
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    position: static;
+  }
+
+  /* decoration ideas */
+  .decoration-ideas {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .decoration-ideas-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  /* hr */
+
+  hr {
+    margin: 15px auto;
+    width: 80%;
+    background: var(--darkOliveColor);
+  }
+
+  /* plants */
+
+  .plants {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .plantsCard {
+    width: 30%;
+    margin: 55px auto 15px auto;
+  }
+
+  .plantsCard > p {
+    font-size: 1.4rem;
+  }
+
+  /* online shop */
+
+  .online-shop {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .shop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .history {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .history p {
+    font-size: 1.4rem;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+  }
+
+  /* contact */
+
+  .line {
+    display: block;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .contactCards {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  /* footer */
+
+  footer {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(--darkOliveColor);
+
+  }
+
+  .footerCard{
+      width: 80%;
+      margin: 0 auto;
+  } 
+  
+  .navFooter,
+  .newsletter {
+    display: block;
+  }
+
+  .navFooter li{
+      display: block;
+      text-align: 1.2rem;
+      font-family: 'Reenie Beanie', cursive;
+  }
+}
+
+@media (min-width: 992px) {
+  .plantsCard {
+    margin-top: 0;
+  }
+}
