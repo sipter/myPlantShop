@@ -41,9 +41,10 @@ header {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   font-family: "Gloria Hallelujah", cursive;
   margin-left: 2rem;
+  margin-top: 60px;
 }
 
 /* Navbar styling*/
@@ -59,7 +60,7 @@ nav {
 
 ul li {
   display: inline;
-  font-size: 1.8rem;
+  font-size: 3rem;
   padding: 5px;
   font-family: "Gloria Hallelujah", cursive;
   font-weight: 800;
@@ -73,7 +74,7 @@ a {
 /* Decoration ideas start here */
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.8rem;
   font-family: "Gloria Hallelujah", cursive;
   margin-top: 8px;
 }
@@ -91,9 +92,15 @@ img {
   align-items: center;
 }
 
+.decoCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .decoration-ideas-images > div > p {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Reenie Beanie", cursive;
 }
 
@@ -126,6 +133,14 @@ hr {
   width: 200px;
   height: 300px;
   /* border: 1px solid black; */
+  overflow: auto;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--oliveColor);
+}
+::-webkit-scrollbar {
+  width: 2px;
 }
 
 .plantsCard {
@@ -137,7 +152,7 @@ hr {
 }
 
 h3 {
-  font-size: 2.4rem;
+  font-size: 3rem;
   font-family: "Reenie Beanie", cursive;
 }
 
@@ -169,7 +184,7 @@ h3 {
 
 .shop > div > p {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Reenie Beanie", cursive;
 }
 
@@ -259,17 +274,19 @@ input {
 }
 
 label {
-  font-size: 2rem;
+  font-size: 4rem;
   font-family: "Reenie Beanie", cursive;
 }
 
 ::placeholder {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.8rem;
 }
 
 input,
 textarea {
+  height: 40px;
+  width: 300px;
   border-left: none;
   border-top: none;
   border-right: 1px solid var(--oliveColor);
@@ -281,6 +298,7 @@ input:focus,
 textarea:focus {
   outline: none;
   text-align: center;
+  font-size: 2.2rem;
   color: var(--superDarkOliveColor);
 }
 
@@ -288,7 +306,7 @@ textarea:focus {
 
 footer {
   width: 100%;
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: center;
   background: var(--darkOliveColor);
@@ -311,15 +329,17 @@ footer {
   color: var(--beigeColor);
 }
 
-
-
-
-
-
 /* MEDIA QUERY */
 
 @media (min-width: 576px) {
   /* NAVBAR */
+
+  h1 {
+    font-size: 3rem;
+    font-family: "Gloria Hallelujah", cursive;
+    margin-left: 2rem;
+    margin-top: -20px;
+  }
   nav {
     display: flex;
     flex-direction: row;
@@ -333,6 +353,10 @@ footer {
     flex-direction: column;
   }
 
+  .decoCards {
+    display: flex;
+    flex-direction: column;
+  }
   .decoration-ideas-images {
     display: flex;
     flex-direction: row;
@@ -362,10 +386,11 @@ footer {
   .plantsCard {
     width: 30%;
     margin: 55px auto 15px auto;
+    overflow:auto;
   }
 
   .plantsCard > p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   /* online shop */
@@ -393,7 +418,7 @@ footer {
   }
 
   .history p {
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-family: "Open Sans", sans-serif;
     text-align: center;
   }
@@ -404,18 +429,14 @@ footer {
     display: block;
   }
 
-  form {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 80%;
+  .contactCards {
+    width: 100%;
     margin: 0 auto;
   }
 
-  .contactCards {
-    width: 40%;
-    margin: 0 auto;
+  input:focus,
+  textarea:focus {
+    font-size: 2.6rem;
   }
 
   /* footer */
@@ -428,28 +449,85 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     background: var(--darkOliveColor);
-
   }
 
-  .footerCard{
-      width: 80%;
-      margin: 0 auto;
-  } 
-  
-  .navFooter,
+  .footerCard {
+    width: 80%;
+    margin: 0 auto;
+  }
+
   .newsletter {
     display: block;
   }
 
-  .navFooter li{
-      display: block;
-      text-align: 1.2rem;
-      font-family: 'Reenie Beanie', cursive;
+  .navFooter li {
+    display: block;
+    font-size: 3rem;
+    font-family: "Reenie Beanie", cursive;
+  }
+
+  .newsletter > h3 {
+    text-align: center;
   }
 }
 
 @media (min-width: 992px) {
+  /* decoration ideas */
+  .decoCards {
+    margin-right: 15px;
+  }
+
+  /* my plants */
   .plantsCard {
     margin-top: 0;
+  }
+
+  .plantsCard > p {
+    overflow-x: auto;
+    font-size: 2.2rem;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--oliveColor);
+  }
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  /* history */
+
+  .history > p {
+    font-size: 2.2rem;
+  }
+
+  /* footer */
+  .navFooter {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* decoration ideas */
+  .decoCards {
+    margin-right: 30px;
+  }
+
+  .plantsCard{
+    overflow: auto;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--oliveColor);
+  }
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  /* forms styling in large screens */
+  .formInLg {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* width: 80%;
+    margin: 0 auto; */
   }
 }

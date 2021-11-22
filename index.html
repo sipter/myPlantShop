@@ -17,9 +17,9 @@
     <header>
         <nav>
             <ul>
-                <li> <a href="#"> Online Shop</a></li>
-                <li> <a href="#"> About</a></li>
-                <li> <a href="#"> Contact</a></li>
+                <li> <a href="#onlineShop"> Online Shop</a></li>
+                <li> <a href="#about"> About</a></li>
+                <li> <a href="#contact"> Contact</a></li>
             </ul>
         </nav>
         <div class="headerH1">
@@ -33,19 +33,19 @@
         <div class="decoration-ideas">
             <h2>Decoration Ideas</h2>
             <div class="decoration-ideas-images">
-                <div>
+                <div  class="decoCards">
                     <img src="images/cutImages/plantDeco1.jpg" alt="">
                     <p>How to decorate your shelves</p>
                 </div>
-                <div>
+                <div class="decoCards">
                     <img src="images/cutImages/plantDeco2.jpg" alt="">
                     <p>How to decorate your living room!</p>
                 </div>
-                <div>
+                <div class="decoCards">
                     <img src="images/cutImages/plantDeco3.png" alt="">
                     <p>How to decorate your bathroom!</p>
                 </div>
-                <div>
+                <div class="decoCards">
                     <img src="images/cutImages/plantDeco4.jpg" alt="">
                     <p>How to decorate your kitchen!</p>
                 </div>
@@ -108,7 +108,7 @@
 
         <!-- Online Shop -->
 
-        <div class="online-shop">
+        <div class="online-shop" id="onlineShop">
             <h2>Our online shop!</h2>
             <div class="shop">
                 <div class="shoppingCard">
@@ -144,7 +144,7 @@
 
         <hr>
         <!-- our history -->
-        <div class="history">
+        <div class="history" id="about">
             <h2>Our history</h2>
             <div>
                 <p>
@@ -160,11 +160,11 @@
         <hr class="line">
         <!-- Contact -->
 
-        <div class="contactContainer">
+        <div class="contactContainer" id="contact">
 
             <h2>Contact us!</h2>
             <div class="contactForm">
-                <form action="method">
+                <form action="method" class="formInLg">
                     <div class="contactCards">
                         <label for="userName">Write your name</label>
                         <input type="text" id="userName" name="userName" placeholder="Vanesa">
@@ -178,7 +178,7 @@
                         <input type="email" id="userEmail" name="userEmail" placeholder="email@example.com" required>
                     </div>
                     <div class="contactCards one">
-                        <label for="userComment">Write your comments here:</label>
+                        <label for="userComment">Write your comments:</label>
                         <textarea name="userComment" id="userComment"
                             placeholder="Write your comments here:"></textarea>
                     </div>
