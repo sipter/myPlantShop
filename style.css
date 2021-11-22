@@ -133,14 +133,6 @@ hr {
   width: 200px;
   height: 300px;
   /* border: 1px solid black; */
-  overflow: auto;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--oliveColor);
-}
-::-webkit-scrollbar {
-  width: 2px;
 }
 
 .plantsCard {
@@ -160,7 +152,16 @@ h3 {
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
   text-align: center;
+  overflow: auto;
 }
+
+::-webkit-scrollbar-thumb {
+  background: var(--oliveColor);
+}
+::-webkit-scrollbar {
+  width: 2px;
+}
+
 
 /* .plants > p {
     font-size: 1.8rem;
